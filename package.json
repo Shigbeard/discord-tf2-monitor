@@ -1,0 +1,22 @@
+{
+  "name": "discord-tf2-monitor",
+  "version": "1.0.0",
+  "description": "A discord bot designed to monitor the status of a TF2 server",
+  "main": "app.js",
+  "dependencies": {
+    "better-sqlite3": "^7.1.2",
+    "chalk": "^4.1.0",
+    "discord.js": "^12.5.1",
+    "gamedig": "^2.0.23",
+    "javascript-color-gradient": "^1.2.3",
+    "nodemon": "^2.0.6",
+    "prompt": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "node setup.js",
+    "start": "nodemon app.js"
+  },
+  "author": "Shigbeard <shigbeard@shigbeard.xyz> (https://shigbeard.xyz)",
+  "license": "GPL-3.0-or-later"
+}
