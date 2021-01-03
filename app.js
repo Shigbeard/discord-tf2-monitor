@@ -40,7 +40,7 @@ bot.on("ready", async () => {
 });
 
 bot.on("message", async message => {
-	if(message.author.id != config.owner) return;
+	if(message.author.id != config.ownerid) return;
 	if(message.author.bot) return;
 	if(message.channel.type === "dm") return;
 	
