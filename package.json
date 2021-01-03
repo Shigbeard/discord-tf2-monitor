@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A discord bot designed to monitor the status of a TF2 server",
   "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shigbeard/discord-tf2-monitor"
+  },
   "dependencies": {
     "better-sqlite3": "^7.1.2",
     "chalk": "^4.1.0",
