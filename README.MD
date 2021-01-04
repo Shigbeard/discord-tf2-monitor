@@ -6,6 +6,7 @@ I initially made this for the Triumph MGE servers because I thought it looked co
 
 ## Requirements
 + NodeJS (v14.15.3 or higher)
+  No, seriously. This uses `setInterval()` to do its scheduling, and we store that interval into the database by an id. If you get errors pertaining to sqlite not storing an object into a table, update NodeJS.
 + Some patience
 
 ## Getting this pile of garbage to run
