@@ -25,15 +25,38 @@ It's pretty dead simple.
 Yeah, I was lazy, I didn't make a help function.
 
 + `!status <hostname> <port>` OR `!status <hostname:port>`
+    
     This command will query a server with gamedig and output info about it in the channel. This was mostly made to test the real bread and butter of the bot...
 + `!monitor <hostname> <port> <channel id> <name>` - For Voice Channels
+    
     This command will register a voice channel as an output for monitoring the playercount of a given server.
 + `!monitor <hostname> <port> <channel id>` - For Text Channels
+    
     This command will register a text channel as an output for monitoring the playercount of a given server.
 + `!schedules list`
+    
     Shows the active `setInterval()` entries in the database.
 + `!schedules delete <v/t> <id>`
+    
     Deletes a given voice/text schedule with given ID. (*UNTESTED*)
++ `!leaderboard [offset]`
+
+    Shows a leaderboard for MGE. (*In Development*)
+    
+To get the leaderboard to work, you'll have to manually edit your config.json file. I'm still working on an interactive setup for this.
+```json
+{
+    "token": "...",
+    "ownerid": 1234567890,
+    "prefix": "!",
+    "leaderboard": {
+        "host": "ip or hostname here",
+        "user": "username here",
+        "password": "password here",
+        "database": "mge mysql database"
+    }
+}
+```
 
 ## License
 GNU General Public 3.0 aka I really don't give a fuck do what you like.

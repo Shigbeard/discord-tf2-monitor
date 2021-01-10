@@ -10,9 +10,11 @@
   "dependencies": {
     "better-sqlite3": "^7.1.2",
     "chalk": "^4.1.0",
+    "cli-table": "^0.3.4",
     "discord.js": "^12.5.1",
     "gamedig": "^2.0.23",
     "javascript-color-gradient": "^1.2.3",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.6",
     "prompt": "^1.1.0"
   },
