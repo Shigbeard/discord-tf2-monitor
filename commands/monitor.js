@@ -176,7 +176,7 @@ module.exports.restart = async (bot) => {
         doScheduleVoice(0,data);
         interval = setInterval(() => {
             doScheduleVoice(interval,data);
-        },2*60*1000);
+        },10*60*1000);
         db.prepare(`UPDATE voice_schedules SET interval=${Number(interval)} WHERE id=${vs.id}`).run();
     }
 }
@@ -217,7 +217,7 @@ module.exports.run = async (bot, message, args) => {
             doScheduleVoice(0,data);
             interval = setInterval(() => {
                 doScheduleVoice(interval,data);
-            }, 2*60*1000);
+            }, 10*60*1000);
             
             // schedules TIEM
             // await storage.setItem(interval,["voice",host,port,stype,[channel.guild.id, channel.id],name]);
