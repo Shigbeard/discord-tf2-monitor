@@ -82,15 +82,18 @@ module.exports.run = async (bot, message, args) => {
     let host = "";
     let port = "27015";
     let type = "tf2";
+    if(args == undefined){
+        msg.edit("This command expects at least 1 argument.")
+    }
     if(args[0].includes(":")){
         let split = args[0].split(":");
         host = split[0];
         port = split[1];
-        type = args[1];
+        if(args[1] != undefined) type = args[1];
     }else{
         host = args[0];
-        port = args[1];
-        type = args[2];
+        if(args[1] != undefined) port = args[1];
+        if(args[2] != undefined) type = args[2];
     }
     console.log(message.content, args);
     queryServer(host, port, type).then((state) => {
