@@ -6,13 +6,17 @@ const config = require('../config.json');
 
 const Table = require('cli-table');
 
-const conn = mysql.createConnection({
+const conn = mysql.createPool({
+    connectionLimit: 5,
     host: config.leaderboard.host,
     user: config.leaderboard.user,
     password: config.leaderboard.password,
     database: config.leaderboard.database
 });
-conn.connect();
+
+conn.on('error', (err) => {
+    console.log(`MySQL errored! "${err.code}" ${err.fatal == 1 && 'FATAL' || 'NOT FATAL'}`);
+});
 function timeDifference(current, previous) {
     // This disgusting function just returns a string, of how many
     // years/months/days/hours/minutes/seconds since previous based on current
