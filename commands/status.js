@@ -82,8 +82,9 @@ module.exports.run = async (bot, message, args) => {
     let host = "";
     let port = "27015";
     let type = "tf2";
-    if(args == undefined){
-        msg.edit("This command expects at least 1 argument.")
+    if(args[0] == undefined){
+        msg.edit("This command expects at least 1 argument.");
+        return;
     }
     if(args[0].includes(":")){
         let split = args[0].split(":");
