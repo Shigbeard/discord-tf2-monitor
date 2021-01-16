@@ -95,7 +95,7 @@ buildEmbed = (state) => {
         // "title": "Click to connect to server",
         "description": `Playing on **${state.map}**.`,
         // "url": `steam://connect/${state.connect}`,
-        "color": parseInt(colorGradient.getColor(playercount).slice(1),16),
+        "color": parseInt(colorGradient.getColor(playercount).slice(1),state.maxplayers),
         "timestamp": `${d.toISOString()}`,
         "footer": {
             "icon_url": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/mozilla/36/electric-plug_1f50c.png",
